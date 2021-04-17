@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="PhotoApp">
+    <link rel="stylesheet" href="b06d59c2cc5c0032a6d30a4696e56e40">
+    <script src="0d77fbb855a215244d13df8a59eeb154"></script>
+<body>
+
+<div id="root">
+    <div class="container">
+        <container></container>
+
+    </div>
+</div>
+
+</body>
+</html>

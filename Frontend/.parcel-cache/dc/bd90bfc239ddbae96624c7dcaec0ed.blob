@@ -1,0 +1,47 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+  controller: class Photo {
+    constructor($http) {
+      this._httpService = $http;
+    }
+    yesButton = '<div color="red">Some very bad things have happened. I don\'t know what, but it seems like this is the end for us.</div>';
+    check() {
+      this._httpService.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+      return this._httpService.get("http://localhost:8000/api/photo");
+    }
+    $onInit() {
+      this.check().then(result => {
+        this.data = result.data;
+        console.log(data);
+      });
+    }
+    increment() {}
+    decrement() {}
+  },
+  template() {
+    return `
+      <h1>Photo Page</h1>
+
+      <h3>User ID: {{ photo.data[0].userid }}</h3>
+      <div>
+          <table class="table table-striped">
+              <thead>
+                  <th>No</th><th>Code</th><th>Name</th><th>Time</th><th>Updated At</th>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="item in photo.data">
+                      <td>{{ $index + 1 }}</td>
+                      <td style="width: 10%"><input type="text" class="form-control" ng-model="item.product_code"></td>
+                      <td><input type="text" class="form-control" ng-model="item.product_name"></td>
+                      <td style="width: 10%"><input type="text" class="form-control w-20" ng-model="item.product_time"></td>
+                      <td>{{item.updated_at}}</td>
+                  </tr>
+              </tbody>
+          </table>
+          
+          <button ng-click="photo.save()" class="btn btn-primary pull-right btn-save">Save</button>
+      </div>
+    `;
+  }
+};

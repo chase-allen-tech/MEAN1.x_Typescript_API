@@ -1,0 +1,32 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+  controller: class Counter {
+    constructor($http) {}
+    count = 0;
+    yesButton = '<div color="red">Some very bad things have happened. I don\'t know what, but it seems like this is the end for us.</div>';
+    $onInit() {
+      this.count = 1;
+      let ser = this._httpService;
+      debugger;
+      let data = this._httpService.get("https://showcasetalk.com/api/photographer_time/245");
+      console.log(data);
+    }
+    increment() {
+      this.count += 1;
+    }
+    decrement() {
+      this.count -= 1;
+    }
+  },
+  template() {
+    return `
+      <div>
+          <input ng-model="$ctrl.count"></div>
+          <button ng-click="$ctrl.increment()">+</button>
+          <button ng-click="$ctrl.decrement()">-</button>
+          <div ng-bind-html="$ctrl.yesButton"></div>
+      </div>
+    `;
+  }
+};

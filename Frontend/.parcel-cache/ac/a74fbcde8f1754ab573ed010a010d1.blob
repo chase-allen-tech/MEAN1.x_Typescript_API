@@ -1,0 +1,13 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "appModule", function () {
+  return appModule;
+});
+var _angular = require('angular');
+var _angularDefault = _parcelHelpers.interopDefault(_angular);
+require('angular-sanitize');
+var _componentsContainerContainerComponent = require('./components/container/container.component');
+var _componentsContainerContainerComponentDefault = _parcelHelpers.interopDefault(_componentsContainerContainerComponent);
+var _componentsPhotoPhotoComponent = require('./components/photo/photo.component');
+var _componentsPhotoPhotoComponentDefault = _parcelHelpers.interopDefault(_componentsPhotoPhotoComponent);
+const appModule = _angularDefault.default.module('PhotoApp', ['ngSanitize']).component('container', _componentsContainerContainerComponentDefault.default).component('photo', _componentsPhotoPhotoComponentDefault.default);

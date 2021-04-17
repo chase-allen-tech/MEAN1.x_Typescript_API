@@ -1,0 +1,7 @@
+.btn-save {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 25px;
+}
+/*# sourceMappingURL=index.HASH_REF_8a54875d93ea5a061fe61acea1082133.css.map */

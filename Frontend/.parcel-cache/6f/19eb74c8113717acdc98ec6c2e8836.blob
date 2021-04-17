@@ -1,0 +1,16 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+  template() {
+    return `
+    <header>
+      <h1>
+        Photos
+      </h1>
+    </header>
+    <div>
+        <counter></counter>
+    </div>
+    `;
+  }
+};

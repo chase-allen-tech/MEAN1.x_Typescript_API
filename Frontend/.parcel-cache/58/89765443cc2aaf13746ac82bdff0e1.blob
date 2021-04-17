@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app="CounterApp">
+    <link rel="stylesheet" href="1226eacb18e51bb8a7a33e94892176db">
+    <script src="0d77fbb855a215244d13df8a59eeb154"></script>
+<body>
+
+<div id="root">
+    <container></container>
+</div>
+
+</body>
+</html>
